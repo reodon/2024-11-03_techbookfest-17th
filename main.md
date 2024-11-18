@@ -54,10 +54,13 @@ MNBP は人工重力を発生させるために回転することを考慮した
 
 $$
 \begin{align}
+m & \Coloneqq \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
+r & \Coloneqq \text{フレームの半径} = 4.4\ \text{[m]} \\
+\\
 \sigma & \Coloneqq \text{周方向のフープ応力 [MPa]} = (PD)/(2t) \\
+t & \Coloneqq \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]} \\
+D & \Coloneqq \text{内径} = r - 2t = 4400 - 20 = 4380 \ \text{[mm]} = 4.38\ \text{[m]} \\
 P & \Coloneqq \text{内圧 [MPa]} \\
-D & \Coloneqq \text{内径} = 2000\ \text{[mm]} = 2\ \text{[m]} \\
-t & \Coloneqq \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]}
 \end{align}
 $$
 
@@ -74,8 +77,6 @@ $$
 
 $$
 \begin{align}
-m & \Coloneqq \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
-r & \Coloneqq \text{フレームの半径} = 4.4\ \text{[m]} \\
 F & = ma = mrω^2 = 300 \times 4.4 \times (0.38g / 4.4) = 300 \times 0.38g = 114g \\
   & = 114 \times 9.80665 = 1117.9581\ \text{[N]}
 \end{align}
@@ -85,8 +86,8 @@ $$
 
 $$
 \begin{align}
-& \text{パイプ内側の面積} = D \pi L = 2 \times \pi \times 1 = 2 \pi \ \text{[m$^2$]} \\
-& P = 1117.9581 / (2 \pi) = 177.928557784623... \simeq 178\ \text{[Pa]}
+& \text{パイプ内側の面積} = D \pi L = 4.38 \times \pi \times 1 = 4.38 \pi \ \text{[m$^2$]} \\
+& P = 1117.9581 / (4.38 \pi) = 81.2459167966317... \simeq 81.25\ \text{[Pa]}
 \end{align}
 $$
 
@@ -94,8 +95,9 @@ $$
 
 $$
 \begin{align}
-\sigma & = (PD)/(2t) = (178 \times 10^{-6} \times 2000) / (2 \times 10) \\
-& = 0.0178\ \text{[MPa]}
+\sigma & = (PD)/(2t) = (81.25 \times 10^{-6} \times 4380) / (2 \times 10) \\
+& = 0.01779375 \\
+& \simeq 0.0178\ \text{[MPa]}
 \end{align}
 $$
 
