@@ -107,10 +107,10 @@ $100 / 0.0178 = 5617.97752808989... \simeq 5600 \ \text{倍}$ の強度の余裕
 
 $$
 \begin{align}
-& \big( (1.01^2 - 1^2) \times \pi \times 1 \times 1.13 \big) / 5600 \\
-\quad & = 0.0000127419632037 \ \text{[t]} \\
-\quad & \simeq 0.01274 \ \text{[kg]} \\
-\quad & \simeq 12.7 \ \text{[g]}
+& \big( (2.2^2 - 2.19^2) \times \pi \times 1 \times 1.13 \big) / 5600 \\
+\quad & = 0.000027829461... \ \text{[t]} \\
+\quad & \simeq 0.02783 \ \text{[kg]} \\
+\quad & \simeq 27.8 \ \text{[g]}
 \end{align}
 $$
 
@@ -123,9 +123,9 @@ S45C の引張強度を $690$ , 比重を $7.85$ として \[5\]、
 $$
 \begin{align}
 & \big( (1.01^2 - 1^2) \times \pi \times 1 \times 7.85 \big) / 38640 \\
-\quad & = 0.0000128285765229 \ \text{[t]} \\
-\quad & \simeq 0.01283 \ \text{[kg]} \\
-\quad & \simeq 12.8 \ \text{[g]}
+\quad & = 0.000028018632... \ \text{[t]} \\
+\quad & \simeq 0.02802 \ \text{[kg]} \\
+\quad & \simeq 28.0 \ \text{[g]}
 \end{align}
 $$
 
