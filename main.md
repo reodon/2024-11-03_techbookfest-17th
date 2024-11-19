@@ -55,12 +55,12 @@ MNBP は人工重力を発生させるために回転することを考慮した
 $$
 \begin{align}
 m & \Coloneqq \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
-r & \Coloneqq \text{フレームの半径} = 4.4\ \text{[m]} \\
+r & \Coloneqq \text{植物モジュールの重心のバルーン中心からの距離} = \text{フレームの半径 + クリアランス + (植物モジュールの高さ / 2)} = 3.8 + 0.1 + (1/2) = 4.4\ \text{[m]} \\
 \\
 \sigma & \Coloneqq \text{周方向のフープ応力 [MPa]} = (PD)/(2t) \\
 t & \Coloneqq \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]} \\
-D & \Coloneqq \text{内径} = r - 2t = 4400 - 20 = 4380 \ \text{[mm]} = 4.38\ \text{[m]} \\
-P & \Coloneqq \text{内圧 [MPa]} \\
+D & \Coloneqq \text{内径} = 2 \times 3.8 - 2t = 7600 - 20 = 7580 \ \text{[mm]} = 7.58\ \text{[m]} \\
+P & \Coloneqq \text{フレーム全体（360°）にかかる荷重} = \text{フープ応力における内圧 [MPa]} \\
 \end{align}
 $$
 
@@ -86,8 +86,8 @@ $$
 
 $$
 \begin{align}
-& \text{パイプ内側の面積} = D \pi L = 4.38 \times \pi \times 1 = 4.38 \pi \ \text{[m$^2$]} \\
-& P = 1117.9581 / (4.38 \pi) = 81.2459167966317... \simeq 81.25\ \text{[Pa]}
+& \text{パイプ内側の面積} = D \pi L = 7.58 \times \pi \times 1 = 7.58 \pi \ \text{[m$^2$]} \\
+& P = 1117.9581 / (7.58 \pi) = 46.9468490196896... \simeq 46.95\ \text{[Pa]}
 \end{align}
 $$
 
@@ -95,8 +95,8 @@ $$
 
 $$
 \begin{align}
-\sigma & = (PD)/(2t) = (81.25 \times 10^{-6} \times 4380) / (2 \times 10) \\
-& = 0.01779375 \\
+\sigma & = (PD)/(2t) = (46.95 \times 10^{-6} \times 7580) / (2 \times 10) \\
+& = 0.01779405 \\
 & \simeq 0.0178\ \text{[MPa]}
 \end{align}
 $$
@@ -107,10 +107,10 @@ $100 / 0.0178 = 5617.97752808989... \simeq 5600 \ \text{倍}$ の強度の余裕
 
 $$
 \begin{align}
-& \big( (2.2^2 - 2.19^2) \times \pi \times 1 \times 1.13 \big) / 5600 \\
-\quad & = 0.000027829461... \ \text{[t]} \\
-\quad & \simeq 0.02783 \ \text{[kg]} \\
-\quad & \simeq 27.8 \ \text{[g]}
+& \big( (3.8^2 - 3.79^2) \times \pi \times 1 \times 1.13 \big) / 5600 \\
+\quad & = 0.000048115174... \ \text{[t]} \\
+\quad & \simeq 0.04812 \ \text{[kg]} \\
+\quad & \simeq 48.1 \ \text{[g]}
 \end{align}
 $$
 
@@ -122,14 +122,14 @@ S45C の引張強度を $690$ , 比重を $7.85$ として \[5\]、
 
 $$
 \begin{align}
-& \big( (1.01^2 - 1^2) \times \pi \times 1 \times 7.85 \big) / 38640 \\
-\quad & = 0.000028018632... \ \text{[t]} \\
-\quad & \simeq 0.02802 \ \text{[kg]} \\
-\quad & \simeq 28.0 \ \text{[g]}
+& \big( (3.8^2 - 3.79^2) \times \pi \times 1 \times 7.85 \big) / 38640 \\
+\quad & = 0.000048442236... \ \text{[t]} \\
+\quad & \simeq 0.04844 \ \text{[kg]} \\
+\quad & \simeq 48.4 \ \text{[g]}
 \end{align}
 $$
 
-念の為、安全係数として3倍のマージンをとったとしても $12.8 \times 3 = 38.4 \ \text{[g]}$ であるため、鋼鉄製のフレームを増設してもプラント全体の重さは1t以上なので無視できるほどの増加で済む。
+念の為、安全係数として3倍のマージンをとったとしても $48.4 \times 3 = 145.2 \ \text{[g]}$ であるため、鋼鉄製のフレームを増設してもプラント全体の重さは1t以上なので無視できるほどの増加で済む。
 
 # まとめ
 今回は、人工重力を発生させるために、バルーン形状の水耕栽培プラントを回転させても強度的に問題がないか計算した。
