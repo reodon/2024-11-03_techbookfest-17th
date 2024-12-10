@@ -63,13 +63,15 @@ MNBP は人工重力を発生させるために回転することを考慮した
 
 $$
 \begin{align}
-m & \Coloneqq \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
-r & \Coloneqq \text{植物モジュールの重心のバルーン中心からの距離} = \text{フレームの半径 + クリアランス + (植物モジュールの高さ / 2)} = 3.8 + 0.1 + (1/2) = 4.4\ \text{[m]} \\
+m \Coloneqq & \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
+r \Coloneqq & \text{植物モジュールの重心のバルーン中心からの距離} \\
+  = & \text{フレームの半径 + クリアランス + (植物モジュールの高さ / 2)} \\
+  = & 3.8 + 0.1 + (1/2) = 4.4\ \text{[m]} \\
 \\
-\sigma & \Coloneqq \text{周方向のフープ応力 [MPa]} = (PD)/(2t) \\
-t & \Coloneqq \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]} \\
-D & \Coloneqq \text{内径} = 2 \times 3.8 - 2t = 7600 - 20 = 7580 \ \text{[mm]} = 7.58\ \text{[m]} \\
-P & \Coloneqq \text{フレーム全体（360°）にかかる荷重} = \text{フープ応力における内圧 [MPa]} \\
+\sigma \Coloneqq & \text{周方向のフープ応力 [MPa]} = (PD)/(2t) \\
+t \Coloneqq & \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]} \\
+D \Coloneqq & \text{内径} = 2 \times 3.8 - 2t = 7600 - 20 = 7580 \ \text{[mm]} = 7.58\ \text{[m]} \\
+P \Coloneqq & \text{フレーム全体（360°）にかかる荷重} = \text{フープ応力における内圧 [MPa]} \\
 \end{align}
 $$
 
