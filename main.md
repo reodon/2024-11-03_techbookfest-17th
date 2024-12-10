@@ -24,7 +24,7 @@ Manzano ら \[2\] は、低重力可変型 3D クリノスタットを開発し�
 彼らは、地上 1g、 疑似微小重力(µg)、および、0.17g と 0.38g（月や火星表面の重力を模擬している）を作り出し、シロイヌナズナの根の成長に及ぼす影響について報告している。
 結果として、根の細胞は 1g 環境と比較して、0.17g では、µg と同様に細胞の増殖速度は速くなるが、細胞の大きさは小さくなることを報告している。なお、0.38g 環境では、根の細胞の増殖速度、大きさは 1g 環境と比較して有意差は認められなかった。
 
-![Fig. 4 Average size of the nucleolus (area in μm2) as determined by the immunohistological detection of NucL1 under simulated microgravity, Moon (0.17 g RPMHW and RPMSW) and Mars partial gravity (0 .38 gRPMHW and RPMSW) and 1 g static control. a, b Wildtype line (Col 0). c, d Mutant nucL2. Statistically significant differences (p < 0.05) have been indicated with an * vs. 1 g control, average n = 35 in Col 0 and n = 73 in NucL2](./assets/images/fig_01.png)
+[]( scale=0.1 )![Fig. 4 Average size of the nucleolus (area in μm2) as determined by the immunohistological detection of NucL1 under simulated microgravity, Moon (0.17 g RPMHW and RPMSW) and Mars partial gravity (0 .38 gRPMHW and RPMSW) and 1 g static control. a, b Wildtype line (Col 0). c, d Mutant nucL2. Statistically significant differences (p < 0.05) have been indicated with an * vs. 1 g control, average n = 35 in Col 0 and n = 73 in NucL2](./assets/images/fig_01.png)
 **出典： \[2\]**
 
 上記より、0.38g では植物の成長に致命的な影響はないと仮定して以降の議論を進める。
@@ -33,7 +33,7 @@ Manzano ら \[2\] は、低重力可変型 3D クリノスタットを開発し�
 MNBP は前述したとおり、バルーン形状の植物栽培プラントである。
 初期構想の図を以下に引用する。
 
-![MNBP の構造](./assets/images/fig_02.png)
+[]( scale=0.2 )![MNBP の構造](./assets/images/fig_02.png)
 **図 MNBP の構造（初期構想）**
 
 \[1\] にて、すでに MNBP の諸元の方針が決められているので引用する。
@@ -55,9 +55,9 @@ MNBP は人工重力を発生させるために回転することを考慮した
 植物栽培モジュールの中心に重心があると仮定し、そこに 0.38g 相当の遠心力がかかるよう回転させて強度に問題がないか確認する。
 強度の確認のために周方向の応力が必要になるため、周方向のフープ応力を求めることにする。\[3\]
 
-![MNBP の上面図](./assets/images/mnbp_top-view.svg)
+[]( scale=0.3 )![MNBP の上面図](./assets/images/mnbp_top-view.svg)
 
-![人工重力構造](./assets/images/人工重力構造.svg)
+[]( scale=0.3 )![人工重力構造](./assets/images/人工重力構造.svg)
 
 まずは、ナイロン製のフレームの強度を確認する。
 
