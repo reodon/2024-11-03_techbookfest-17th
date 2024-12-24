@@ -169,8 +169,8 @@ MNBP 全体の回転により生じた遠心力が、バルーンの材質（和
 ```math
 \begin{align*}
 P &= \frac{F}{S} = \frac{mr\omega^2}{S} = \frac{m}{S} r \omega^2 = \sigma r \omega^2 \\
-  &= 2.34 \times 5.0 \times \frac{0.38g}{4.4} = \frac{4.45g}{4.4} \\
-  &= 9.9180892 \ldots \\
+  &= 2.34 \times 5.0 \times \frac{0.38g}{4.4} \\
+  &\simeq \frac{4.45g}{4.4} = 9.9180892 \ldots \\
   &\simeq 9.9\ [\text{Pa}]
 \end{align*}
 ```
