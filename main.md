@@ -69,84 +69,111 @@ MNBP は人工重力を発生させるために回転することを考慮した
 
 まずは、ナイロン製のフレームの強度を確認する。
 
-$$
-\begin{align}
-m \Coloneqq & \text{すべてのモジュールの重さの合計} = 3\ \text{[kg]} * 100 = 300\ \text{[kg]} \\
-r \Coloneqq & \text{植物モジュールの重心のバルーン中心からの距離} \\
-  = & \text{フレームの半径 + クリアランス + (植物モジュールの高さ / 2)} \\
-  = & 3.8 + 0.1 + (1/2) = 4.4\ \text{[m]} \\
+```math
+\begin{align*}
+            m \Coloneqq&\ \text{すべてのモジュールの重さの合計} \\
+                      =&\ 3\ \text{[kg]} * 100 \\
+                      =&\ 300\ \text{[kg]} \\
+            r \Coloneqq&\ \text{植物モジュールの重心のバルーン中心からの距離} \\
+                      % =&\ \text{フレームの半径 + クリアランス + (植物モジュールの高さ / 2)} \\
+                      =&\ \begin{split}
+                            & \text{フレームの半径} \\
+                            & \quad + \text{クリアランス} \\
+                            & \quad + \frac{\text{植物モジュールの高さ}}{2}
+                          \end{split} \\
+                      =&\ 3.8 + 0.1 + \frac{1}{2} \\
+                      =&\ 4.4\ \text{[m]} \\
 \\
-\sigma \Coloneqq & \text{周方向のフープ応力 [MPa]} = (PD)/(2t) \\
-t \Coloneqq & \text{厚み} = 10\ \text{[mm]} = 0.01\ \text{[m]} \\
-D \Coloneqq & \text{内径} = 2 \times 3.8 - 2t = 7600 - 20 = 7580 \ \text{[mm]} = 7.58\ \text{[m]} \\
-P \Coloneqq & \text{フレーム全体（360°）にかかる荷重} = \text{フープ応力における内圧 [MPa]} \\
-\end{align}
-$$
+\sigma_\theta \Coloneqq&\ \text{周方向のフープ応力} \\
+                      =&\ \frac{PD}{2t}\ \text{[MPa]} \\
+            t \Coloneqq&\ \text{フレームの厚み} \\
+                      =&\ 10\ \text{[mm]} \\
+                      =&\ 0.01\ \text{[m]} \\
+            D \Coloneqq&\ \text{フレームの内径} \\
+                      =&\ 2 \times 3.8 - 2t = 7600 - 20 \\
+                      =&\ 7580 \ \text{[mm]} \\
+                      =&\ 7.58\ \text{[m]} \\
+            P \Coloneqq&\ \text{フレーム全体（360°）にかかる荷重} \\
+                      =&\ \text{フープ応力における内圧 [MPa]} \\
+\end{align*}
+```
 
-まずは、「フレーム全体（360°）にかかる荷重」を求める。
+まずは、「フレーム全体（360°）にかかる荷重 = フープ応力における内圧」を求める。
 
-$$
-\begin{align}
-& ma = mrω^2 \\
-& a = rω^2 \\
-& 0.38g = 4.4 ω^2 \\
-& ω^2 = (0.38g) / 4.4 \\
-\end{align}
-$$
+```math
+\begin{align*}
+   ma &= mrω^2 \\
+    a &= rω^2 \\
+0.38g &= 4.4 ω^2 \\
+  ω^2 &= (0.38g) / 4.4 \\
+\end{align*}
+```
 
-$$
-\begin{align}
-F & = ma = mrω^2 = 300 \times 4.4 \times (0.38g / 4.4) = 300 \times 0.38g = 114g \\
-  & = 114 \times 9.80665 = 1117.9581\ \text{[N]}
-\end{align}
-$$
+```math
+\begin{align*}
+F &= ma = mrω^2 \\
+  &= 300 \times 4.4 \times (0.38g / 4.4) = 300 \times 0.38g \\
+  &= 114g = 114 \times 9.80665 \\
+  &\simeq 1117.9581\ \text{[N]}
+\end{align*}
+```
 
-ここで、パイプの幅 $L$ を仮に $1\ \text{[m]}$ とすると、
+ここで、フレームの幅 $L$ を仮に $1\ \text{[m]}$ とすると、
 
-$$
-\begin{align}
-& \text{パイプ内側の面積} = D \pi L = 7.58 \times \pi \times 1 = 7.58 \pi \ \text{[m$^2$]} \\
-& P = 1117.9581 / (7.58 \pi) = 46.9468490196896... \simeq 46.95\ \text{[Pa]}
-\end{align}
-$$
+```math
+\begin{align*}
+S \Coloneqq&\ \text{フレーム内側の面積} \\
+          =&\ D \pi L \\
+          =&\ 7.58 \times \pi \times 1 \\
+          =&\ 7.58 \pi \ \text{[m$^2$]}
+\end{align*}
+```
+
+```math
+\begin{align*}
+P &= \frac{F}{S} = \frac{1117.9581}{7.58 \pi} \\
+  &= 46.9468490196896... \\
+  &\simeq 46.95\ \text{[Pa]} = 46.95 \times 10^{-6}\ \text{[MPa]}
+\end{align*}
+```
 
 フレーム全体にかかる荷重が求められたので、周方向のフープ応力を計算する。
 
-$$
-\begin{align}
-\sigma & = (PD)/(2t) = (46.95 \times 10^{-6} \times 7580) / (2 \times 10) \\
+```math
+\begin{align*}
+\sigma_\theta &= \frac{PD}{2t} = \frac{46.95 \times 10^{-6} \times 7580}{2 \times 10} \\
 & = 0.01779405 \\
 & \simeq 0.0178\ \text{[MPa]}
-\end{align}
-$$
+\end{align*}
+```
 
 ナイロンの引張強度は、 $41\text{-}166 \ \text{[MPa]}$ [^4] の範囲なので、ここでは $100 \ \text{[MPa]}$ とすると、
-$100 / 0.0178 = 5617.97752808989... \simeq 5600 \ \text{倍}$ の強度の余裕がある。
+$100 \div 0.0178 = 5617.97752808989 \ldots \simeq 5600 \ \text{倍}$ の強度の余裕がある。
 ナイロンの比重は、 $1.12\text{-}1.14$ なので $1.13$ として、必要な強度を満たすフレームの質量を計算すると、
 
-$$
-\begin{align}
-& \big( (3.8^2 - 3.79^2) \times \pi \times 1 \times 1.13 \big) / 5600 \\
-\quad & = 0.000048115174... \ \text{[t]} \\
-\quad & \simeq 0.04812 \ \text{[kg]} \\
-\quad & \simeq 48.1 \ \text{[g]}
-\end{align}
-$$
+```math
+\begin{align*}
+& \frac{(3.8^2 - 3.79^2) \times \pi \times 1 \times 1.13}{5600} \\
+& \qquad = 0.000048115174\ldots \ \text{[t]} \\
+& \qquad \simeq 0.04812 \ \text{[kg]} \\
+& \qquad \simeq 48.1 \ \text{[g]}
+\end{align*}
+```
 
 となる。
 
 ナイロンでは剛性が足りない可能性があるので、鋼鉄（S45C）をフレーム素材とした場合の質量も計算する。
 S45C の引張強度を $690$ , 比重を $7.85$ として [^5]、
-強度の余裕は $5600 / 100 \times 690 \simeq 38640 \ \text{倍}$ なので、
+強度の余裕は $5600 \div 100 \times 690 \simeq 38640 \ \text{倍}$ なので、
 
-$$
-\begin{align}
-& \big( (3.8^2 - 3.79^2) \times \pi \times 1 \times 7.85 \big) / 38640 \\
-\quad & = 0.000048442236... \ \text{[t]} \\
-\quad & \simeq 0.04844 \ \text{[kg]} \\
-\quad & \simeq 48.4 \ \text{[g]}
-\end{align}
-$$
+```math
+\begin{align*}
+& \frac{(3.8^2 - 3.79^2) \times \pi \times 1 \times 7.85}{38640} \\
+& \qquad = 0.000048442236... \ \text{[t]} \\
+& \qquad \simeq 0.04844 \ \text{[kg]} \\
+& \qquad \simeq 48.4 \ \text{[g]}
+\end{align*}
+```
 
 念の為、安全係数として3倍のマージンをとったとしても $48.4 \times 3 = 145.2 \ \text{[g]}$ であるため、鋼鉄製のフレームを増設してもプラント全体の重さは1t以上なので無視できるほどの増加で済む。
 
