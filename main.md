@@ -24,7 +24,7 @@ Manzano ら \[2\] は、低重力可変型 3D クリノスタットを開発し�
 彼らは、地上 1g、 疑似微小重力(µg)、および、0.17g と 0.38g（月や火星表面の重力を模擬している）を作り出し、シロイヌナズナの根の成長に及ぼす影響について報告している。
 結果として、根の細胞は 1g 環境と比較して、0.17g では、µg と同様に細胞の増殖速度は速くなるが、細胞の大きさは小さくなることを報告している。なお、0.38g 環境では、根の細胞の増殖速度、大きさは 1g 環境と比較して有意差は認められなかった。
 
-[]( scale=0.1 )![Fig. 4 Average size of the nucleolus (area in μm2) as determined by the immunohistological detection of NucL1 under simulated microgravity, Moon (0.17 g RPMHW and RPMSW) and Mars partial gravity (0 .38 gRPMHW and RPMSW) and 1 g static control. a, b Wildtype line (Col 0). c, d Mutant nucL2. Statistically significant differences (p < 0.05) have been indicated with an * vs. 1 g control, average n = 35 in Col 0 and n = 73 in NucL2](./assets/images/fig_01.png)
+[]( scale=0.1 )![免疫組織学的検出法によるNucL1を用いて測定された核小体の平均サイズ（面積：μm²）。実験は模擬微小重力、月面重力（0.17 g RPMHWおよびRPMSW）、火星部分重力（0.38 g RPMHWおよびRPMSW）、および1 gの静止対照条件下で実施された。a、bは野生型ライン（Col 0）、c、dは変異体nucL2を示す。統計的に有意な差（p < 0.05）は、1 g対照群との比較で \* で示されている。Col 0では平均n = 35、NucL2ではn = 73。](./assets/images/fig_01.png)
 **出典： \[2\]**
 
 上記より、0.38g では植物の成長に致命的な影響はないと仮定して以降の議論を進める。
