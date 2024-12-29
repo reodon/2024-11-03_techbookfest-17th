@@ -15,17 +15,17 @@ slide: false
 
 また、アルテミス計画の一部である月面基地建設、そこからの火星探査を実現するためには、地球からの輸送に頼らない宇宙での自給自足体制の確立が必要不可欠である。
 採算を考慮した現実的な方法として、野菜を中心とした植物の宇宙農場の建設が考えられる。
-先行研究として、バルーン形状の植物栽培プラント「メタルネットバルーンプラント」(以下、MNBP) \[1\] があり、この装置をベースにして本記事を展開していく。
+先行研究として、バルーン形状の植物栽培プラント「メタルネットバルーンプラント」(以下、MNBP) [^1] があり、この装置をベースにして本記事を展開していく。
 
 今回は、植物栽培に致命的な影響を与えない重力の大きさを考察し、同程度の人工重力を回転によって MNBP に与えた際に、強度に問題がないかを計算によって確認する。
 
 # 植物栽培における重力の大きさ
-Manzano ら \[2\] は、低重力可変型 3D クリノスタットを開発し、模擬低重力環境応答について解析した。
+Manzano ら [^2] は、低重力可変型 3D クリノスタットを開発し、模擬低重力環境応答について解析した。
 彼らは、地上 1g、 疑似微小重力(µg)、および、0.17g と 0.38g（月や火星表面の重力を模擬している）を作り出し、シロイヌナズナの根の成長に及ぼす影響について報告している。
 結果として、根の細胞は 1g 環境と比較して、0.17g では、µg と同様に細胞の増殖速度は速くなるが、細胞の大きさは小さくなることを報告している。なお、0.38g 環境では、根の細胞の増殖速度、大きさは 1g 環境と比較して有意差は認められなかった。
 
 []( scale=0.1 )![免疫組織学的検出法によるNucL1を用いて測定された核小体の平均サイズ（面積：μm²）。実験は模擬微小重力、月面重力（0.17 g RPMHWおよびRPMSW）、火星部分重力（0.38 g RPMHWおよびRPMSW）、および1 gの静止対照条件下で実施された。a、bは野生型ライン（Col 0）、c、dは変異体nucL2を示す。統計的に有意な差（p < 0.05）は、1 g対照群との比較で \* で示されている。Col 0では平均n = 35、NucL2ではn = 73。](./assets/images/fig_01.png)
-**出典： \[2\]**
+出典 [^2]
 
 上記より、0.38g では植物の成長に致命的な影響はないと仮定して以降の議論を進める。
 
@@ -33,17 +33,17 @@ Manzano ら \[2\] は、低重力可変型 3D クリノスタットを開発し�
 MNBP は前述したとおり、バルーン形状の植物栽培プラントである。
 初期構想の図を以下に引用する。
 
-[]( scale=0.2 )![MNBP の構造](./assets/images/fig_02.png)
-**図 MNBP の構造（初期構想）**
+[]( scale=0.2 )![MNBP の構造（初期構想）](./assets/images/fig_02.png)
+出典 [^1]
 
-\[1\] にて、すでに MNBP の諸元の方針が決められているので引用する。
+MNBP の先行研究 [^1] にて、すでに MNBP の諸元の方針が決められているので引用する。
 
 **表 MNBP諸元 （バルーンの素材に和紙＋こんにゃくを用いた場合）**
 |バルーン直径 $\text{[m]}$|バルーン表面積 $\text{[m}^3\text{]}$|バルーン厚さ $\text{[m]}$|比重  |バルーン重量 $\text{[t]}$|材質          |破断強度 $\text{[MPa]}$|気圧 $\text{[atm]}$|圧力 $\text{[Pa]}$|応力 $\text{[MPa]}$|
 |----:                  |----:                             |----:                  |----:|----:                  |:----        |----:                 |----:             |----:             |----:             |
 |10                     |314                               |0.0018                 |1.3  |0.7                    |和紙＋こんにゃく|525                   |0.1               |10133             |417               |
 
-本記事での説明は以上とする。詳細は、\[1\] を参照されたい。
+本記事での説明は以上とする。詳細は、先行研究 [^1] を参照されたい。
 
 # 人工重力を発生させる回転が MNBP に与える影響について
 MNBP は人工重力を発生させるために回転することを考慮した設計になっていないため、構造の見直しとその影響を具体的な数値で検討していく。
@@ -56,7 +56,7 @@ MNBP は人工重力を発生させるために回転することを考慮した
 植物栽培モジュールの高さを1メートルとし、フレームの外側にクリアランスを10センチメートル設けて接続する。
 植物栽培モジュールは1つあたり3kgとし、1つのバルーンに対して100個とりつけることとする。
 植物栽培モジュールの中心に重心があると仮定し、そこに 0.38g 相当の遠心力がかかるよう回転させて強度に問題がないか確認する。
-強度の確認のために周方向の応力が必要になるため、周方向のフープ応力を求めることにする。\[3\]
+強度の確認のために周方向の応力が必要になるため、周方向のフープ応力を求めることにする。[^3]
 
 []( scale=0.3 )![MNBP の上面図](./assets/images/mnbp_top-view.svg)
 
@@ -115,7 +115,7 @@ $$
 \end{align}
 $$
 
-ナイロンの引張強度は、 $41\text{-}166 \ \text{[MPa]}$ \[4\] の範囲なので、ここでは $100 \ \text{[MPa]}$ とすると、
+ナイロンの引張強度は、 $41\text{-}166 \ \text{[MPa]}$ [^4] の範囲なので、ここでは $100 \ \text{[MPa]}$ とすると、
 $100 / 0.0178 = 5617.97752808989... \simeq 5600 \ \text{倍}$ の強度の余裕がある。
 ナイロンの比重は、 $1.12\text{-}1.14$ なので $1.13$ として、必要な強度を満たすフレームの質量を計算すると、
 
@@ -131,7 +131,7 @@ $$
 となる。
 
 ナイロンでは剛性が足りない可能性があるので、鋼鉄（S45C）をフレーム素材とした場合の質量も計算する。
-S45C の引張強度を $690$ , 比重を $7.85$ として \[5\]、
+S45C の引張強度を $690$ , 比重を $7.85$ として [^5]、
 強度の余裕は $5600 / 100 \times 690 \simeq 38640 \ \text{倍}$ なので、
 
 $$
@@ -187,9 +187,10 @@ P &= \frac{F}{S} = \frac{mr\omega^2}{S} = \frac{m}{S} r \omega^2 = \sigma r \ome
 
 以上、俺達の戦いはこれからだ...！
 
-# 参考文献
-1. [spacefarm/spaceFarm.pdf at NT富山 · busyoucow/spacefarm](https://github.com/busyoucow/spacefarm/blob/NT%E5%AF%8C%E5%B1%B1/spaceFarm.pdf)
-2. Manzano, A., Herranz, R., den Toom, L.A., te Slaa, S., Borst, G., Visser, M., Javier Medina, F. & von Loon, J.J.W.A. 2018. Novel, Moon and Mars, partial gravity simulation paradigms and their effects on the balance between cell growth and cell proliferation during early plant development. npj Microgravity 9: 1-11.
-3. [内圧を受ける薄肉円筒に生じる応力（フープ応力） - 製品設計知識](https://seihin-sekkei.com/calculation-tool/internal_pressure_thin_cylinder/)
-4. [PA6（ナイロン6）物性表｜KDAのプラスチック加工技術](https://www.kda1969.com/materials/pla_mate_pa6b.htm)
-5. [S45C - 川上ハガネ株式会社](https://www.kawakamihagane.com/materials/s45c/)
+
+
+[^1]: busyoucow. "spacefarm/spaceFarm.pdf at NT富山 · busyoucow/spacefarm". GitHub. https://github.com/busyoucow/spacefarm/blob/NT富山/spaceFarm.pdf, (参照 2024-11-03).
+[^2]: Manzano, A., Herranz, R., den Toom, L.A., te Slaa, S., Borst, G., Visser, M., Javier Medina, F. & von Loon, J.J.W.A. Novel, Moon and Mars, partial gravity simulation paradigms and their effects on the balance between cell growth and cell proliferation during early plant development. npj Microgravity 9. 2018. pp. 1-11.
+[^3]: 田口技術士事務所. "内圧を受ける薄肉円筒に生じる応力（フープ応力）". 製品設計知識. https://seihin-sekkei.com/calculation-tool/internal_pressure_thin_cylinder/, (参照 2024-11-03).
+[^4]: 株式会社KDA. "PA6（ナイロン6）物性表". KDAのプラスチック加工技術. https://www.kda1969.com/materials/pla_mate_pa6b.htm, (参照 2024-11-03).
+[^5]: "S45C". 川上ハガネ株式会社. https://www.kawakamihagane.com/materials/s45c/, (参照 2024-11-03).
